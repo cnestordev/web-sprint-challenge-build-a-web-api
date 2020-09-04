@@ -7,7 +7,6 @@ const { validateProjectId, validateProject } = require('./middleware')
 
 //GET all projects
 router.get('/', (req, res) => {
-    console.log('endpoint hit')
     projects.get()
         .then(response => {
             res.status(200).json({ data: response })
